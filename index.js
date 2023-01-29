@@ -46,7 +46,7 @@ app.post('/verify-code', (req, res) => {
        .verificationChecks
        .create({ to: phoneNumber, code: '170760' })
        .then(verification_check => console.log(verification_check.status))
-       .catch(error => console.error(error));
+    .catch(error => console.error(error));
     });
 
 
