@@ -1,0 +1,137 @@
+// const firebase = require("firebase-admin");
+// const functions = require('firebase-functions');
+// const firestore = require("firebase-admin").firestore;
+
+// var serviceAccount = require("./offline-shop-4f02a-firebase-adminsdk-ak1tp-b7077262a1.json");
+// firebase.initializeApp({
+//   credential: firebase.credential.cert(serviceAccount),
+//   databaseURL: "https://offline-shop-4f02a-default-rtdb.firebaseio.com"
+// });
+
+// const db = firebase.firestore();
+
+
+// const accountSid = "AC03ad19d36edfa6197c157034a26144af";
+// const authToken = "21a9337ed5cd5b31118fb13f0a80ffbc";
+// const client = require("twilio")(accountSid, authToken);
+// // client.messages
+// //   .create({ body: "(ابو النشات)مرحبا يا مارك", from: "+12724660267", to: "+201275817179" })
+// //   .then(message => console.log(message.sid));
+// const twilio = require('twilio');
+
+// // const client = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
+
+// const phoneNumber = "+201275817179"; // user's phone number in E.164 format
+
+// exports.sendSMS = functions.https.onRequest((req, res) => {
+//     const toNumber = req.query.to || req.body.to;
+//     const smsBody = req.query.body || req.body.body;
+
+//     if (!toNumber) {
+//         res.status(400).send({ error: 'To number is required' });
+//         return;
+//     }
+    
+//     if (!smsBody) {
+//         res.status(400).send({ error: 'SMS body is required' });
+//         return;
+//     }
+    
+//     client.messages
+//     .create({
+//       body: smsBody,
+//       from: '+1234567890',
+//       to: toNumber
+//     })
+//     .then(message => res.send(message.sid))
+//     .catch(err => res.send(err));    
+// });
+
+
+// exports.sendOTP = functions.https.onRequest((req, res) => {
+//     const toNumber = req.query.to || req.body.to;
+//     const OTP = Math.floor(1000 + Math.random() * 9000); // generating OTP
+//     if (!toNumber) {
+//         res.status(400).send({ error: 'To number is required' });
+//         return;
+//     }
+//     client.messages
+//     .create({
+//       body: `Your OTP is ${OTP}`,
+//       from: '+1234567890',
+//       to: toNumber
+//     })
+//     .then(message => res.send({ success: true, message: message.sid, OTP: OTP }))
+//     .catch(err => res.send(err));
+
+//     db.collection('users').doc(toNumber).set({
+//         OTP: OTP,
+//         attempts: 0,
+//         timestamp: firebase.firestore.FieldValue.serverTimestamp()
+//     });
+// });    
+
+// exports.verifyOTP = functions.https.onRequest((req, res) => {
+//     const account = req.query.account || req.body.account;
+//     const OTP = req.query.OTP || req.body.OTP;
+//     if (!account) {
+//         res.status(400).send({ error: 'Account is required' });
+//         return;
+//     }
+
+//     db.collection('users').doc(account).get().then(doc => {
+//         if (!doc.exists) {
+//             res.status(400).send({ error: 'Account not found' });
+//             return;
+//         }
+//         const userData = doc.data();
+//         const timestamp = userData.timestamp.toDate(); // convert timestamp to Date object
+//         const currentTime = new Date();
+//         const timeDiff = currentTime - timestamp; // difference in milliseconds
+//         const timeInterval = 5 * 60 * 1000; // 5 minutes in milliseconds
+//         if (timeDiff > timeInterval) {
+//             res.status(400).send({ error: 'OTP is expired' });
+//             return;
+//         }
+//         if (userData.OTP !== OTP) {
+//             if(userData.attempts >=3){
+//                 res.status(400).send({ error: 'Too many attempts' });
+//                 return;
+//             }
+//             db.collection('users').doc(account).update({
+//                 attempts: userData.attempts + 1
+//             });
+//             res.status(400).send({ error: 'Wrong OTP' });
+//             return;
+//         }
+//         // OTP is valid
+//         // update user data and return success response
+//     }).catch(err => {
+//         res.status(500).send({ error: 'Error while fetching user data' });
+//     });
+// });
+
+// exports.deleteOTP = functions.https.onRequest((req, res) => {
+// const account = req.query.account || req.body.account;
+// if (!account) {
+// res.status(400).send({ error: 'Account is required' });
+// return;
+// }
+// db.collection('users').doc(account).delete()
+// .then(() => {
+// res.send({ success: true });
+// })
+// .catch(err => res.send(err));
+// });
+
+// exports.deleteAllOTP = functions.https.onRequest((req, res) => {
+// db.collection('users').get()
+// .then(snapshot => {
+// snapshot.forEach(doc => {
+// doc.ref.delete();
+// });
+// res.send({ success: true });
+// })
+// .catch(err => res.send(err));
+// });
+

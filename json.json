@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "offline-shop-4f02a",
+  "private_key_id": "1726336e086eb089a54a3d1fffbd7a29bd98b6d8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC3KUaph+fI0AIY\nMwoDVtEco5w1o7WTRzZCArnICiJ8B9pn/yT3p+vXaboRaCIqlDyQ4KYvPbhuJo9b\nHy0iY2qIX2YLRoyf4Rvtd5QVA9AZXCjXpWDXerp3l600hqnp2SllRkTKLOIf1zJL\n6AYMlvr9Yzghl8TtPkZ/ar9l5juvTnjtLlrhNYxvoNn9TzRdxD9G9BusM5Hydpkb\nUqFTVU5M1qy2efB/BNYhxurDHb9oH77vcZPRHcyKdBwrTOw3g6xTLDVAs11STfPD\nQwlbB22OZottSX2O6ABBxu+O6gw2eZYyf05b4t8bEn5wFc0cmzpqbQQhc5zE1V1H\n3pYVU8ZHAgMBAAECggEATapZdbqUrMCTGsrNpKPUENZJfy83Z8eK+MuqFmpBvCEi\nWfXFKaSRKysARLBIyJBJ7E7t+NstkLuWDxf1rf7E5iW5oe9c4tBz5KpPZufSfmZn\nRSWxnj1Cw0JUJhEyDGBSnsiAk9AbZE/+WlR8+CqvK/G+E/SEgurkvtO3bBCH32np\nwIbU9JjjSE1K/noQ+LZ61yFTVLwi+JDMdBsZj6WuvCW0UN0vMUGDX8RBh0Q7EzpU\nUVnRqGLea4ryGVjv6uok3/189raolKMt0TnFzaFOjs5MdQ5+9lhk7xq6cwYSpDNW\nJKDJ9qOJZbkOILi9ouSrqLzgIvRHNN9XwMJm8Iq2BQKBgQDfM8hk/a2jTd/DBvYI\naQWDbj4Qxkn6hqD0Ug6LhtRgLuKd0l2a/yQwozYdcvTeKdZoErxWDWqU1vGWgxvq\nMMLIItbuiYORLXQZ/yVTWjXg4c3kbLpG8n2XNHX6mpRMdAQ+uuPjzDNLQJH2pEXo\nJJze0mQXu3hjmgtvqjcj9HeEIwKBgQDSE0QqgSIXHfHBKttYDBf2OQD4OqxkvlhO\n4Sg2XbGIyjma+EV5ibDuXmxiQR0p27Cr0IhsnFraKFpYxdvUjVng/IHMffSQwV3y\nuigs9vcWToYF5cHY93u7LZIqD1g8HIQkcj3dzQUk2F2EPzajbrnF68JCK1epKEvk\nOk38MzR1jQKBgA5gKm7+u7lB4cCQ6TW/deByMEMqUkd1dlZmFpO7+l+7hVL+4pKC\nDlWnnWumJMlOToXjdwff01aExYiZJyodO95iCA/TAYtPLyQhf8jvjXrPcFBfBFxf\nb+FWOqcKX7TQ4BkeNmFMnJ0jKoOFLw91lDjxugqhQ26+1C+7+dMyAqSbAoGBAK0A\nRsvGKp/k/hm5RIe+9eDE0wKZty0EAE99ZxNWl4TyHPx9ZyGO/hFf21wTCYRWMqlc\nA22GWd99CeI/lyj0+0aoS/Bu7gBj7g2dtsZI3/UT15V1v+0A6nmcLtnKZzyhs0Uc\ne8x0Mb9FG8Z0FHgFEKJo5EJ/1SIuWElsppqCRLplAoGBAMX2l2fFy7HwZ+fWRJBm\nKw+y6i0Pqah7k0Jgql0C+8tc/16k1tV5mcJ9BUVL9AdYtbPL5OxP/HMJsAo7p1KJ\nbafWaQw4qUwFOFFbmUotFJeY9pvLnvj2wX3CPXkaQ3YIc0B1drCSs8EC2hSxYFBh\nIFrqLKsXf4GYfGMXMPVx6wEk\n-----END PRIVATE KEY-----\n",
+  "client_email": "send-phone-number@offline-shop-4f02a.iam.gserviceaccount.com",
+  "client_id": "101494426428816015290",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/send-phone-number%40offline-shop-4f02a.iam.gserviceaccount.com"
+}
