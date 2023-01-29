@@ -1,3 +1,18 @@
+
+// const phoneNumber = "+201275817179"; // user's phone number in E.164 format
+// client.verify.services("VA2854239ce08db5715147f4a5648e1b19")
+//   .verifications
+//   .create({ to: phoneNumber, channel: 'sms' })
+//   .then(verification => console.log(verification.status))
+//   .catch(error => console.error(error));
+
+//   client.verify.services("VA2854239ce08db5715147f4a5648e1b19")
+//     .verificationChecks
+//     .create({ to: phoneNumber, code: '170760' })
+//     .then(verification_check => console.log(verification_check.status))
+//     .catch(error => console.error(error));
+
+
 // const firebase = require("firebase-admin");
 // const functions = require('firebase-functions');
 // const firestore = require("firebase-admin").firestore;
