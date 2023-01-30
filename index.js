@@ -23,7 +23,7 @@ app.post('/verify-phone', (req, res) => {
         client.verify.services("VA2854239ce08db5715147f4a5648e1b19")
           .verifications
           .create({ to: phoneNumber, channel: 'sms' })
-          .then(verification => res.end(verification.status))
+          .then(verification => res.status(202).send(verification.status))
           .catch(error => res.status(404).send(phoneNumber));
           
       });
