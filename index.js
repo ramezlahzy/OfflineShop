@@ -31,7 +31,7 @@ app.post('/verify-code', (req, res) => {
        const code = req.body.code;
        client.verify.services("VA2854239ce08db5715147f4a5648e1b19")
        .verificationChecks
-       .create({ to: phoneNumber, code: '170760' })
+       .create({ to: phoneNumber, code: code })
        .then(verification_check => console.log(verification_check.status))
     .catch(error => console.error(error));
     });
