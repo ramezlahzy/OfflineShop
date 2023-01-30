@@ -24,7 +24,7 @@ app.post('/verify-phone', (req, res) => {
           .verifications
           .create({ to: phoneNumber, channel: 'sms' })
           .then(verification => res.end(verification.status))
-          .catch(error => res.status(500).send(phoneNumber));
+          .catch(error => res.status(404).send(phoneNumber));
           
       });
 app.post('/verify-code', (req, res) => {
