@@ -36,6 +36,10 @@ app.post('/verify-code', (req, res) => {
     .catch(error => console.error(error));
     });
 
+    app.get('/verify-phone', (req, res) => {
+   res.end("Hello World");
+    });
+
 app.get('/',(req,res) => {
     res.send('Hello World');
     res.end();
