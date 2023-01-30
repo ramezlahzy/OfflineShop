@@ -23,8 +23,9 @@ app.post('/verify-phone', (req, res) => {
         client.verify.services("VA2854239ce08db5715147f4a5648e1b19")
           .verifications
           .create({ to: phoneNumber, channel: 'sms' })
-          .then(verification => res.send(verification.status))
+          .then(verification => res.end(verification.status))
           .catch(error => res.status(500).send(phoneNumber));
+          
       });
 app.post('/verify-code', (req, res) => {
        const phoneNumber = req.body.phoneNumber; // phone number in E.164 format
@@ -34,6 +35,7 @@ app.post('/verify-code', (req, res) => {
        .create({ to: phoneNumber, code: code })
        .then(verification_check => console.log(verification_check.status))
     .catch(error => console.error(error));
+
     });
 
     app.get('/verify-phone', (req, res) => {
