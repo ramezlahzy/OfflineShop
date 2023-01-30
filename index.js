@@ -24,7 +24,7 @@ app.post('/verify-phone', (req, res) => {
           .verifications
           .create({ to: phoneNumber, channel: 'sms' })
           .then(verification => res.send(verification.status))
-          .catch(error => res.status(500).send(error));
+          .catch(error => res.status(500).send(phoneNumber));
       });
 app.post('/verify-code', (req, res) => {
        const phoneNumber = req.body.phoneNumber; // phone number in E.164 format
