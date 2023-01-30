@@ -38,6 +38,7 @@ app.post('/verify-code', (req, res) => {
 
 app.get('/',(req,res) => {
     res.send('Hello World');
+    res.end();
 });
 
 
