@@ -4,6 +4,9 @@
 const express = require('express');
 const twilio = require('twilio');
 const app = express();
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
 
 // var serviceAccount = require("./offline-shop-4f02a-firebase-adminsdk-ak1tp-b7077262a1.json");
 // firebase.initializeApp({
@@ -19,12 +22,13 @@ const authToken = "21a9337ed5cd5b31118fb13f0a80ffbc";
 const client = require("twilio")(accountSid, authToken);
 
 app.post('/verify-phone', (req, res) => {
+  console.log(req.body);
         const phoneNumber = req.body.phoneNumber; 
         client.verify.services("VA2854239ce08db5715147f4a5648e1b19")
           .verifications
           .create({ to: phoneNumber, channel: 'sms' })
           .then(verification => res.status(202).send(verification.status))
-          .catch(error => res.status(404).send(phoneNumber));
+          .catch(error => res.status(404).send(error));
       });
 app.post('/verify-code', (req, res) => {
        const phoneNumber = req.body.phoneNumber; // phone number in E.164 format
